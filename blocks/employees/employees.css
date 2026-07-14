@@ -1,0 +1,14 @@
+.employee-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.employee-card h2 {
+  margin: 0;
+}
+
+.employee-card span {
+  color: gray;
+}
