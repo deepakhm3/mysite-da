@@ -1,6 +1,12 @@
 export default async function decorate(block) {
   // Get the sheet path from the first row
-  const sheetPath = block.textContent.trim();
+  const rows = [...block.children];
+
+  const sheetPath = rows[0].textContent.trim();
+  const department = rows[1].textContent.trim();
+
+  console.log(sheetPath);
+  console.log(department);
 
   // Fetch the generated JSON
   const response = await fetch(`${sheetPath}.json`);
