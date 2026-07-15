@@ -1,8 +1,16 @@
+.employees {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
 .employee-card {
   border: 1px solid #ddd;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
+  min-width: 150px;
+  width: 150px;
 }
 
 .employee-card h2 {
