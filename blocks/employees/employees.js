@@ -4,14 +4,11 @@ export default async function decorate(block) {
   const sheetPath = rows[0].textContent.trim();
   const department = rows[1]?.textContent.trim();
 
-  const response = await fetch(`${sheetPath}.json`);
+  console.log("Block HTML BEFORE:", block.innerHTML);
+  console.log("Children:", [...block.children]);
+  console.log("Text:", block.textContent);
 
-  if (!response.ok) {
-    block.innerHTML = `<p>Could not load ${sheetPath}.json</p>`;
-    return;
-  }
-
-  const json = await response.json();
+  return;
 
   let employees = json.data;
 
