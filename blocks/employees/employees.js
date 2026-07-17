@@ -1,4 +1,4 @@
-import { getPlaceholder } from "../../scripts/placeholders";
+import { getPlaceholder } from "../../scripts/placeholders.js";
 export default async function decorate(block) {
   const rows = [...block.children];
 
