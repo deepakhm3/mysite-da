@@ -9,7 +9,7 @@ export default async function decorate(block) {
   const json = await response.json();
 
   // Only show products that are allowed to be indexed
-  const products = json.data.filter((product) => product.robots !== "noindex");
+  const products = json.data;
 
   block.innerHTML = "";
 
