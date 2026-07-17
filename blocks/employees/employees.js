@@ -1,3 +1,4 @@
+import { getPlaceholder } from "../../scripts/placeholders";
 export default async function decorate(block) {
   const rows = [...block.children];
 
@@ -20,8 +21,17 @@ export default async function decorate(block) {
       (employee) => employee.department === department,
     );
   }
+  const title = await getPlaceholder("employee-section-title");
 
-  block.innerHTML = "";
+  const heading = document.createElement("h2");
+  heading.textContent = title;
+
+  block.append(heading);
+  const noEmployeesMessage = await getPlaceholder("no-employees-message");
+  if (employees.length === 0) {
+    block.innerHTML = `<p>${noEmployeesMessage}</p>`;
+    return;
+  }
 
   employees.forEach((employee) => {
     const card = document.createElement("div");
