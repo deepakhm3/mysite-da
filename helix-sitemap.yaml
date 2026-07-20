@@ -1,0 +1,3 @@
+sitemaps:
+  products:
+    source: /docs/products/query-index.json
