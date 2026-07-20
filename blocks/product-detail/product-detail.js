@@ -18,8 +18,12 @@ export default function decorate(block) {
 
   product.innerHTML = `
     <div class="product-image">
-      ${image ? image.outerHTML : ""}
-    </div>
+  ${
+    image
+      ? image.outerHTML
+      : '<img src="https://myawaazdev.asianpaints.com/extdpstorefront/_ui/responsive/theme-alpha/images/missing_product_EN_300x300.jpg" alt="Product image">'
+  }
+</div>
 
     <div class="product-info">
 
@@ -37,14 +41,19 @@ export default function decorate(block) {
       <div class="product-pricing">
 
         <div class="price-column">
-          <span class="label">DPL/UNIT</span>
-          <strong>₹ ${dpl}/EA</strong>
+          <div class="price-column__wrap">
+            <span class="label">DPL/UNIT</span>
+            <p>₹ ${dpl}/EA</p>
+          </div>
 
-          <span class="label">MRP/UNIT</span>
-          <strong>₹ ${mrp}/EA</strong>
+          <div class="price-column__wrap">
+            <span class="label">MRP/UNIT</span>
+            <p>₹ ${mrp}/EA</p>
+          </div>
         </div>
 
         <div class="quantity-column">
+         <div class="quantity-column__wrap">
           <span class="label">QTY. (EA)</span>
           <input
             class="quantity"
@@ -52,7 +61,8 @@ export default function decorate(block) {
             value="0"
             min="0"
           />
-
+          </div>
+         <div class="quantity-column__wrap">
           <span class="label">QTY. (EA)</span>
           <input
             type="number"
@@ -60,13 +70,17 @@ export default function decorate(block) {
             disabled
           />
         </div>
-
+        </div>
         <div class="value-column">
+        <div class="value-column-wrap">
           <span class="label">VALUE</span>
           <strong class="product-value">₹ -</strong>
+          </div>
 
+          <div class="value-column-wrap">
           <span class="label">VALUE</span>
           <strong>₹ -</strong>
+          </div>
         </div>
 
         <div class="cart-column">
