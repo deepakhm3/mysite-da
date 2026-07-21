@@ -1,0 +1,20 @@
+{
+  "products": [
+    {
+      "sku": "ROPR144FERNGREY021",
+      "name": "Print-Fern 144TC-Greying Blue",
+      "price": 1070.89,
+      "mrp": 1999,
+      "rating": 4.8,
+      "stock": 18
+    },
+    {
+      "sku": "ROPR144FERNGREY022",
+      "name": "Print-Fern 144TC-Blue",
+      "price": 950,
+      "mrp": 1800,
+      "rating": 4.5,
+      "stock": 42
+    }
+  ]
+}
